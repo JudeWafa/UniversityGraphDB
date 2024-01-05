@@ -3,35 +3,61 @@
 // Cypher code that simulates a University Database with (students, instructors, courses)
 
 Create (:student {name: "Jood Wafa", Id: "2001", Major: "Computer Science"})
+
 Create (:student {name: "Sara Khaled", Id: "2002", Major: "Data Science"})
+
 Create (:student {name: "Ali Musa", Id: "2003", Major: "Software Engineering"})
+
 Create (:student {name: "Ahmad Muhsen", Id: "2004", Major: "Computer Science"})
+
 Create (:student {name: "Layan Abdullah", Id: "2005", Major: "Cyber Security"})
+
 Create (:student {name: "Aya Samer", Id: "2006", Major: "Data Science"})
+
 Create (:student {name: "Dania Fehmi", Id: "2007", Major: "Data Science"})
+
 Create (:student {name: "Abdulrahman Abdullah", Id: "2008", Major: "Computer Engineering"})
+
 Create (:student {name: "Sami Sameer", Id: "2009, Major: "Computer Science"})
+
 Create (:student {name: "Dana Ghaleb", Id: "2010", Major: "Computer Engineering"})
+
 Create (:student {name: "Ashraf Khaleel", Id: "2011", Major: "Software Engineering"})
 
+
 Create (:instructor {name: "Rahaf Saleh", Id: "3001", Department: "Computer Science"})
+
 Create (:instructor {name: "Fahd Jaber", Id: "3002", Department: "Computer Science"})
+
 Create (:instructor {name: "Adil Kareem", Id: "3003", Department: "Computer Engineering"})
+
 Create (:instructor {name: "Dana Mahmoud", Id: "3004", Department: "Computer Engineering"})
+
 Create (:instructor {name: "Fadi Maher", Id: "3005", Department: "Software Engineering"})
+
 Create (:instructor {name: "Hadeel Mustafa", Id: "3006", Department: "Data Science"})
+
 Create (:instructor {name: "Rana Karam", Id: "3007", Department: "Basic Sciences"})
 
 
 Create (:course {name: "Intro to CS", Id: "1001", Department: "Computer Science"})
+
 Create (:course {name: "Physics 1", Id: "1002", Department: "Basic Sciences"})
+
 Create (:course {name: "Calculus 1", Id: "1003", Department: "Basic Sciences"})
+
 Create (:course {name: "Structured Programming", Id: "1004", Department: "Computer Science"})
+
 Create (:course {name: "Digital Logic Design", Id: "1005", Department: "Computer Engineering"})
+
 Create (:course {name: "Circuits 1", Id: "1006", Department: "Computer Engineering"})
+
 Create (:course {name: "OOP", Id: "1009", Department: "Computer Science"})
+
 Create (:course {name: "Database Systems", Id: "1010", Department: "Computer Science"})
+
 Create (:course {name: "Artificial Intelligence", Id: "1008", Department: "Data Science"})
+
 
 Match (n1: instructor {name: "Rahaf Saleh"}), (n2: course{name:"Intro to CS"})
 Create (n1) -[:teaches {time:"14:00 - 15:00"}]-> (n2)
