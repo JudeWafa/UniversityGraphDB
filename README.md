@@ -30,6 +30,7 @@ Create (:student {name: "Ashraf Khaleel", Id: "2011", Major: "Software Engineeri
 
 
 //Creating Instructors Nodes
+
 Create (:instructor {name: "Rahaf Saleh", Id: "3001", Department: "Computer Science"})
 
 Create (:instructor {name: "Fahd Jaber", Id: "3002", Department: "Computer Science"})
@@ -48,6 +49,7 @@ Create (:instructor {name: "Rana Karam", Id: "3007", Department: "Basic Sciences
 
 
 //Creating Courses Nodes
+
 Create (:course {name: "Intro to CS", Id: "1001", Department: "Computer Science"})
 
 Create (:course {name: "Physics 1", Id: "1002", Department: "Basic Sciences"})
