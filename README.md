@@ -19,7 +19,7 @@ Create (:student {name: "Dania Fehmi", Id: "2007", Major: "Data Science"})
 
 Create (:student {name: "Abdulrahman Abdullah", Id: "2008", Major: "Computer Engineering"})
 
-Create (:student {name: "Sami Sameer", Id: "2009, Major: "Computer Science"})
+Create (:student {name: "Sami Sameer", Id: "2009", Major: "Computer Science"})
 
 Create (:student {name: "Dana Ghaleb", Id: "2010", Major: "Computer Engineering"})
 
@@ -60,7 +60,7 @@ Create (:course {name: "Database Systems", Id: "1010", Department: "Computer Sci
 
 Create (:course {name: "Artificial Intelligence", Id: "1008", Department: "Data Science"})
 
-
+With 1 as dummy
 //Creating "Teaches" relationship between instructors and courses
 Match (n1: instructor {name: "Rahaf Saleh"}), (n2: course{name:"Intro to CS"})
 Create (n1) -[:teaches {time:"14:00 - 15:00"}]-> (n2)
@@ -102,7 +102,7 @@ Match (n1:instructor{name: "Rana Karam"}), (n2:course{name:"Calculus 1"})
 Create (n1) -[:teaches {time:"9:30 - 11:00"}]-> (n2)
 With 1 as dummy
 
-Match (n1:instructor{name: "Fade Maher"}), (n2:course{name:"Database Systems"})
+Match (n1:instructor{name: "Fadi Maher"}), (n2:course{name:"Database Systems"})
 Create (n1) -[:teaches {time:"11:00 - 12:00"}]-> (n2)
 With 1 as dummy
 
