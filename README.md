@@ -2,7 +2,9 @@
 
 // Cypher code that simulates a University Database with (students, instructors, courses)
 
+
 //Creating Students Nodes
+
 Create (:student {name: "Jood Wafa", Id: "2001", Major: "Computer Science"})
 
 Create (:student {name: "Sara Khaled", Id: "2002", Major: "Data Science"})
@@ -25,6 +27,8 @@ Create (:student {name: "Dana Ghaleb", Id: "2010", Major: "Computer Engineering"
 
 Create (:student {name: "Ashraf Khaleel", Id: "2011", Major: "Software Engineering"})
 
+
+
 //Creating Instructors Nodes
 Create (:instructor {name: "Rahaf Saleh", Id: "3001", Department: "Computer Science"})
 
@@ -39,6 +43,8 @@ Create (:instructor {name: "Fadi Maher", Id: "3005", Department: "Software Engin
 Create (:instructor {name: "Hadeel Mustafa", Id: "3006", Department: "Data Science"})
 
 Create (:instructor {name: "Rana Karam", Id: "3007", Department: "Basic Sciences"})
+
+
 
 
 //Creating Courses Nodes
@@ -61,7 +67,11 @@ Create (:course {name: "Database Systems", Id: "1010", Department: "Computer Sci
 Create (:course {name: "Artificial Intelligence", Id: "1008", Department: "Data Science"})
 
 With 1 as dummy
+
+
+
 //Creating "Teaches" relationship between instructors and courses
+
 Match (n1: instructor {name: "Rahaf Saleh"}), (n2: course{name:"Intro to CS"})
 Create (n1) -[:teaches {time:"14:00 - 15:00"}]-> (n2)
 With 1 as dummy
@@ -109,6 +119,7 @@ With 1 as dummy
 
 
 //Creating "Takes" relationship between students and courses
+
 Match (n1:student{name: "Jood Wafa"}), (n2:course{name:"Database Systems"})
 Create (n1) -[:takes]-> (n2)
 With 1 as dummy
@@ -190,7 +201,9 @@ Create (n1) -[:takes]-> (n2)
 With 1 as dummy
 
 
+
 //Creating "Partners" relationship between two students in the same course
+
 Match (n1: student{name: "Sara Khaled"}), (n2: student{name:"Jood Wafa"})
 Create (n1) -[:partners {course: "Database Systems"}]-> (n2)
 With 1 as dummy
