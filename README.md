@@ -1,9 +1,9 @@
-// UniversityGraphDB
+# UniversityGraphDB
 
-// Cypher code that simulates a University Database with (students, instructors, courses)
+## Cypher code that simulates a University Database with (students, instructors, courses)
 
 
-//Creating Students Nodes
+_Creating Students Nodes_
 
 Create (:student {name: "Jood Wafa", Id: "2001", Major: "Computer Science"})
 
@@ -29,7 +29,7 @@ Create (:student {name: "Ashraf Khaleel", Id: "2011", Major: "Software Engineeri
 
 
 
-//Creating Instructors Nodes
+_Creating Instructors Nodes_
 
 Create (:instructor {name: "Rahaf Saleh", Id: "3001", Department: "Computer Science"})
 
@@ -48,7 +48,7 @@ Create (:instructor {name: "Rana Karam", Id: "3007", Department: "Basic Sciences
 
 
 
-//Creating Courses Nodes
+_Creating Courses Nodes_
 
 Create (:course {name: "Intro to CS", Id: "1001", Department: "Computer Science"})
 
@@ -72,7 +72,7 @@ With 1 as dummy
 
 
 
-//Creating "Teaches" relationship between instructors and courses
+_Creating "Teaches" relationship between instructors and courses_
 
 Match (n1: instructor {name: "Rahaf Saleh"}), (n2: course{name:"Intro to CS"})
 Create (n1) -[:teaches {time:"14:00 - 15:00"}]-> (n2)
@@ -120,7 +120,7 @@ With 1 as dummy
 
 
 
-//Creating "Takes" relationship between students and courses
+_Creating "Takes" relationship between students and courses_
 
 Match (n1:student{name: "Jood Wafa"}), (n2:course{name:"Database Systems"})
 Create (n1) -[:takes]-> (n2)
@@ -204,7 +204,7 @@ With 1 as dummy
 
 
 
-//Creating "Partners" relationship between two students in the same course
+_Creating "Partners" relationship between two students in the same course_
 
 Match (n1: student{name: "Sara Khaled"}), (n2: student{name:"Jood Wafa"})
 Create (n1) -[:partners {course: "Database Systems"}]-> (n2)
